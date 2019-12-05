@@ -11,5 +11,13 @@
     "email": "orourke.kevin@gmail.com"
   },
   "license": "Unlicense",
-  "dependencies": {}
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
 }
