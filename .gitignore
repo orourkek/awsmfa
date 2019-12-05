@@ -1,0 +1,16 @@
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+
+.DS_Store
+.env
+
+node_modules
+
+dist/**/*
+
