@@ -1,0 +1,15 @@
+{
+  "name": "awsmfa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Kevin O'Rourke",
+    "email": "orourke.kevin@gmail.com"
+  },
+  "license": "Unlicense",
+  "dependencies": {}
+}
