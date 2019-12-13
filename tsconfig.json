@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
+    "module": "amd",
+    "moduleResolution": "node",
     "lib": ["es6", "es2015"],
     "declaration": false,
-    "outDir": "dist",
+    "outFile": "dist/awsmfa.js",
     "rootDir": "src",
     "strict": true,
-    "types": ["node"],
-    "esModuleInterop": true,
-    "resolveJsonModule": true
+    "types": ["node"]
   }
 }
