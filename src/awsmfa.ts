@@ -37,8 +37,8 @@ main();
 async function main() {
 
   if (!mfaCode) {
-    process.stderr.write('ERROR: MFA code must be supplied');
-    process.exit(1);
+    process.stderr.write('ERROR: MFA code must be supplied\n');
+    program.help();
   }
 
   if (program.durationHours < 1 || program.durationHours > 36) {
