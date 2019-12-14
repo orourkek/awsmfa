@@ -14,7 +14,7 @@ const program = new Command();
 let mfaCode: string = '';
 
 program
-  .version('0.0.1')
+  .version(require('../package.json').version)
   .description(
     'Fetch temporary AWS credentials and merge into dotenv file (.env)'
   )
