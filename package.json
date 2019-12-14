@@ -29,8 +29,7 @@
   },
   "license": "Unlicense",
   "dependencies": {
-    "commander": "^4.0.1",
-    "dotenv": "^8.2.0"
+    "commander": "^4.0.1"
   },
   "devDependencies": {
     "@types/node": "^12.12.14",
