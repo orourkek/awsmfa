@@ -46,6 +46,8 @@ async function main() {
     process.exit(2);
   }
 
+  const durationSeconds = 60 * 60 * program.durationHours;
+
   const userArn = await promiseExec(
     `aws sts get-caller-identity ` +
     `--profile ${program.profile} --query "Arn" --output text`
@@ -60,11 +62,12 @@ async function main() {
   const sessionInfo = await promiseExec(
     `aws sts get-session-token ` +
     `--profile ${program.profile} --serial-number ${mfaSerial} ` +
-    `--token-code ${mfaCode} --duration-seconds ${60 * 60 * 36} --output json`
+    `--token-code ${mfaCode} --duration-seconds ${durationSeconds} ` +
+    `--output json`
   );
 
   const parsedCredentials = JSON.parse(sessionInfo)['Credentials'];
-
+  const expiration = parsedCredentials['Expiration'];
   const replacements = {
     AWS_ACCESS_KEY_ID: parsedCredentials['AccessKeyId'],
     AWS_SECRET_ACCESS_KEY: parsedCredentials['SecretAccessKey'],
@@ -73,7 +76,8 @@ async function main() {
 
   await updateDotenv(process.cwd(), replacements);
 
-  process.stdout.write('Success! .env file updated');
+  process.stdout.write(`Success! .env file updated\n`);
+  process.stdout.write(`Credentials expire at: ${expiration}`);
   process.exit(0);
 }
 
