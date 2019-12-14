@@ -1,5 +1,8 @@
 # @korourke/awsmfa
 
+[![npm version](https://badge.fury.io/js/%40korourke%2Fawsmfa.svg)](https://badge.fury.io/js/%40korourke%2Fawsmfa)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+
 Fetch temporary AWS session credentials for an MFA-protected account, and merge them into local dotenv file (`.env`).
 
 ## Installation
