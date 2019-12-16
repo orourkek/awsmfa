@@ -1,6 +1,6 @@
 {
   "name": "@korourke/awsmfa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Kevin O'Rourke <orourke.kevin@gmail.com>",
   "description": "Utility to fetch temp AWS credentials & merge into .env file",
   "keywords": [
